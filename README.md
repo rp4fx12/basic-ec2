@@ -1,4 +1,4 @@
-###Terraform Script for deploying Hello World Node js server
+#### Terraform Script for deploying Hello World Node js server
 
 1. Install Terraform
 2. Run `aws configure`
