@@ -7,6 +7,7 @@ resource "aws_instance" "example" {
   instance_type = "t2.micro"
   key_name = "HelloWorld"
   vpc_security_group_ids = ["sg-41189330"]
+  iam_instance_profile = "arn:aws:iam::917378046404:instance-profile/EC2Access"
 
   user_data = <<-EOF
               #!bin/bash
@@ -22,6 +23,11 @@ resource "aws_instance" "example" {
               cd /app/hello-world
               npm install
               npm start
+              chmod 755 /tmp
+              cd /tmp
+              #get/remove file in current
+              #delete current instance
+              #move new file to current folder
               EOF
 
   tags {
