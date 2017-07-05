@@ -7,7 +7,7 @@ resource "aws_instance" "example" {
   instance_type = "t2.micro"
   key_name = "HelloWorld"
   vpc_security_group_ids = ["sg-41189330"]
-  iam_instance_profile = "arn:aws:iam::917378046404:instance-profile/EC2Access"
+  iam_instance_profile = "EC2Access"
 
   user_data = <<-EOF
               #!bin/bash
